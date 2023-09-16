@@ -4,19 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Weather Dashboard</title>
 </head>
-<body class="vh-100">
-    <header class="container-fluid w-100 h-25">
-        <div class="row justify-content-center bg-dark">
-            <div class="col-12 col-md-8 justify-content-center align-items-center">
-                <p class="text-danger text-center">test</p>
-            </div>
-        </div>
+
+<body class="container-fluid vh-100 bg-secondary">
+    <header class="row bg-dark justify-content-center">
+        <h1 class="text-danger text-center">Weather Dashboard</h1>
     </header>
+
+    <section class="row bg-light h-auto">
+        <section class="col-3 ">
+            <h2>Search For A City:</h2>
+            <form action="">
+                <input class="col-12" type="text" />
+                <button class="col-12">Search</button>
+            </form>
+            <div class="col-12 border-bottom border-dark my-2"></div>
+            <ul>
+                <li>test3</li>
+            </ul>
+        </section>
+
+        <section class="col-9">
+            <div class="row border border-primary">
+                <h2>Atlanta</h2>
+            </div>
+
+            <div class="row">
+                <h3>5 Day Forecast</h3>
+            </div>
+        </section>
+    </section>
     
 
     
 </body>
 </html>
+<!-- 
+    <header class="container-fluid w-100 bg-dark" style="height: 15%;">
+        <div class="row justify-content-center ">
+            <div class="col-12 col-md-8 justify-content-center align-items-center">
+                <p class="text-center">Weather Dashboard</p>
+            </div>
+        </div>
+    </header>
+-->
