@@ -5,8 +5,9 @@ const forecastWeatherAPI = "https://api.openweathermap.org/data/2.5/forecast?";
 const geoCoderAPI = "https://api.openweathermap.org/geo/1.0/direct";
 
 function getApi() {
+    const city = "London";
     // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = 'https://api.github.com/orgs/nodejs/repos';
+    var requestUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
   
     fetch(requestUrl)
       .then(function (response) {
@@ -16,3 +17,5 @@ function getApi() {
         console.log(data);
       })
 }
+
+getApi();
