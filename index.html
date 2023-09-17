@@ -8,31 +8,23 @@
 </head>
 <body class="container-fluid p-0 vh-100 d-flex flex-column" style="background-color: rgb(155, 173, 173);;">
 
-    <header class="row m-2 rounded" style="height: 4rem; background-color: rgb(87, 87, 87);">
+    <header class="row m-2 rounded" 
+    style="height: 4rem; background-color: rgb(87, 87, 87); 
+    border: 1px solid white">
         <div class="col-12">
-            <h1 class="text-center" style="line-height: 2.1; color: rgb(165, 186, 187);">Weather Dashboard</h1>
+            <h1 class="text-center" style="line-height: 2; color: rgb(229, 241, 241);">Weather Dashboard</h1>
         </div>
     </header>
 
     <section class="row m-0 flex-grow-1" style="">
         <section class="col-3 m-2 p-0 bg-light rounded px-2 mb-auto pb-3 search-bar">
-            <form action="" class="w-100">
+            <form id="city-form" action="" class="w-100">
                     <h4 style="font-weight: bold;">Search For A City:</h4>
-                    <input class="w-100 mx-auto my-1" type="text">
+                    <input id="city-input" class="w-100 mx-auto my-1" type="text">
                     <button id="search-button" class="d-block">Search</button>
                 </form>
                 <div class="col-12 border-bottom border-dark my-2"></div>
-                <ul id="city-list" class="search-list p-0 w-100 d-flex flex-column">
-                    <button>test1</button>
-                    <button>test2</button>
-                    <button>test3</button>
-                    <button>test4</button>
-                    <button>test5</button>
-                    <button>test6</button>
-                    <button>test7</button>
-                    <button>test8</button>
-                    <button>test9</button>
-                </ul>
+                <ul id="city-list" class="search-list p-0 w-100 d-flex flex-column"></ul>
         </section>
 
         <section class="col m-2 ms-2 p-auto mb-2 d-flex flex-column bg-light rounded py-2">
@@ -88,4 +80,6 @@
         </section>
     </section>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body></html>
