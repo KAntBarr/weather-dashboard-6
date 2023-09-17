@@ -33,3 +33,10 @@
     border: 6px solid rgb(114, 147, 148);
     border-radius: 5px;
 }
+
+.five-day-list * {
+    list-style-type: none;
+    flex-grow: 1;
+    height: 90%;
+    margin: 1% 5px auto;
+}
