@@ -19,60 +19,65 @@
     <section class="row m-0 flex-grow-1" style="">
         <section class="col-3 m-2 p-0 bg-light rounded px-2 mb-auto pb-3 search-bar">
             <form id="city-form" action="" class="w-100">
-                    <h4 style="font-weight: bold;">Search For A City:</h4>
-                    <input id="city-input" class="w-100 mx-auto my-1" type="text">
-                    <button id="search-button" class="d-block">Search</button>
-                </form>
-                <div class="col-12 border-bottom border-dark my-2"></div>
-                <ul id="city-list" class="search-list p-0 w-100 d-flex flex-column"></ul>
+                <h4 style="font-weight: bold;">Search For A City:</h4>
+                <input id="city-input" class="w-100 mx-auto my-1" type="text">
+                <button id="search-button" class="d-block">Search</button>
+            </form>
+            <div class="col-12 border-bottom border-dark my-2"></div>
+            <ul id="city-list" class="search-list p-0 w-100 d-flex flex-column"></ul>
         </section>
 
         <section class="col m-2 ms-2 p-auto mb-2 d-flex flex-column bg-light rounded py-2">
 
-            <div class="row d-block day-container mx-0" style="height: 40%;">
-                <h2>Atlanta - <span class="date">9/14/2022 <img src="" alt=""></span></h2>
-                <p class="temp">Temp: <span>75.00F</span></p>
-                <p class="wind">Wind: <span>9.55 MPH</span></p>
-                <p class="humd">Humidity: <span>66%</span></p>
+            <div class="row day-container mx-0 current-weather" style="height: 40%;">
+                <div class="col-6">
+                    <h2 class="city-header d-inline"><span class="city"></span> | <span class="date">9/14/2022</span></h2>
+                    <p>Temp: <span class="temp"></span>F</p>
+                    <p>Wind: <span class="wind"></span> MPH</p>
+                    <p>Humidity: <span class="humd"></span>%</p>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <img src="" alt="" class="d-inline">
+                </div>
             </div>
 
             <div class="row mx-0 d-flex flex-column flex-grow-1">
                 <h4 class="pt-2 d-block" style="font-weight: bold;">5 Day Forecast:</h4>
                 <ul class="d-flex flex-grow-1 five-day-list">
                     <li class="card">
-                        <h5 class="card-title" style="font-weight: bold;">9/14/2022</h5>
+                        <h5 class="card-title date" style="font-weight: bold;">9/14/2022</h5>
                         <img src="" alt="">
-                        <p class="temp">Temp: <span>75.00F</span></p>
-                        <p class="wind">Wind: <span>9.55 MPH</span></p>
-                        <p class="humd">Humidity: <span>66%</span></p>
+                        <p >Temp: <span class="temp"></span> F</p>
+                        <p >Wind: <span class="wind"></span> MPH</p>
+                        <p >Humidity: <span class="humd"></span>%</p>
                     </li>
                     <li class="card">
-                        <h5 class="card-title" style="font-weight: bold;">9/14/2022</h5>
+                        <h5 class="card-title date" style="font-weight: bold;">9/14/2022</h5>
                         <img src="" alt="">
-                        <p class="temp">Temp: <span>75.00F</span></p>
-                        <p class="wind">Wind: <span>9.55 MPH</span></p>
-                        <p class="humd">Humidity: <span>66%</span></p>
+                        <p >Temp: <span class="temp"></span> F</p>
+                        <p >Wind: <span class="wind"></span> MPH</p>
+                        <p >Humidity: <span class="humd"></span>%</p>
                     </li>
                     <li class="card">
-                        <h5 class="card-title" style="font-weight: bold;">9/14/2022</h5>
+                        <h5 class="card-title date" style="font-weight: bold;">9/14/2022</h5>
                         <img src="" alt="">
-                        <p class="temp">Temp: <span>75.00F</span></p>
-                        <p class="wind">Wind: <span>9.55 MPH</span></p>
-                        <p class="humd">Humidity: <span>66%</span></p>
+                        <p >Temp: <span class="temp"></span> F</p>
+                        <p >Wind: <span class="wind"></span> MPH</p>
+                        <p >Humidity: <span class="humd"></span>%</p>
                     </li>
                     <li class="card">
-                        <h5 class="card-title" style="font-weight: bold;">9/14/2022</h5>
+                        <h5 class="card-title date" style="font-weight: bold;">9/14/2022</h5>
                         <img src="" alt="">
-                        <p class="temp">Temp: <span>75.00F</span></p>
-                        <p class="wind">Wind: <span>9.55 MPH</span></p>
-                        <p class="humd">Humidity: <span>66%</span></p>
+                        <p >Temp: <span class="temp"></span> F</p>
+                        <p >Wind: <span class="wind"></span> MPH</p>
+                        <p >Humidity: <span class="humd"></span>%</p>
                     </li>
                     <li class="card">
-                        <h5 class="card-title" style="font-weight: bold;">9/14/2022</h5>
+                        <h5 class="card-title date" style="font-weight: bold;">9/14/2022</h5>
                         <img src="" alt="">
-                        <p class="temp">Temp: <span>75.00F</span></p>
-                        <p class="wind">Wind: <span>9.55 MPH</span></p>
-                        <p class="humd">Humidity: <span>66%</span></p>
+                        <p >Temp: <span class="temp"></span> F</p>
+                        <p >Wind: <span class="wind"></span> MPH</p>
+                        <p >Humidity: <span class="humd"></span>%</p>
                     </li>
                 </ul>
             </div>
@@ -81,5 +86,6 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body></html>

@@ -40,3 +40,8 @@
     height: 90%;
     margin: 1% 5px auto;
 }
+
+.five-day-list > .card > img {
+    height: 20%;
+    width: 20%;
+}
