@@ -1,7 +1,7 @@
 const API_KEY = "e68d5f8f7c296f931478d8dddf6838c0";
 
 const currentWeatherAPI = "https://api.openweathermap.org/data/2.5/weather";
-const forecastWeatherAPI = "https://api.openweathermap.org/data/2.5/forecast?";
+const forecastWeatherAPI = "https://api.openweathermap.org/data/2.5/forecast";
 const geoCoderAPI = "https://api.openweathermap.org/geo/1.0/direct";
 
 const inputEl = $("#city-input");
@@ -12,15 +12,7 @@ let cityList = {};
 function getApi() {
     const city = "London";
     // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`;
-  
-    fetch(requestUrl)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        // console.log(data);
-      })
+    
 }
 
 function showCityList() {
@@ -58,8 +50,51 @@ function addCity(city) {
   }
 }
 
+function getWeather(coordinates) {
+  console.log(coordinates);
+  
+  const requestUrl = `${currentWeatherAPI}?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${API_KEY}`;
+
+  fetch(requestUrl)
+    .then(function (response) {
+      if (response.status !== 200) {
+        throw new Error('Current Weather status is not 200 OK');
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+
+}
+
 function searchCity(cityName) {
-   console.log(cityName);
+  console.log(cityName);
+
+  const coordinates = {};
+
+  const requestUrl = `${geoCoderAPI}?q=${cityName}&limit=1&appid=${API_KEY}`;
+  
+  fetch(requestUrl)
+    .then(function (response) {
+      if (response.status !== 200) {
+        throw new Error('City status is not 200 OK');
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      coordinates["lat"] = data[0].lat;
+      coordinates["lon"] = data[0].lon;
+      getWeather(coordinates);
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
 }
 
 $("#city-form").on("submit", function(event) {
@@ -73,7 +108,7 @@ $("#city-form").on("submit", function(event) {
 })
 
 $("#city-list").on("click", ".city-button", function() {
-  console.log(this.textContent);
+  searchCity(this.textContent);
 })
 
 loadCityList(true);
