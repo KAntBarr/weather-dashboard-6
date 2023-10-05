@@ -4,6 +4,9 @@
 ## Description
 This app will provide the current weather and a 5-day forecast of a searched city.
 
+<img width="1114" alt="image" src="https://github.com/KAntBarr/weather-dashboard-6/assets/70618192/f4ee6ef0-a990-4660-957d-dd591e20bd76">
+
+
 ## Table of Contents
 - [Installation](#Installation)
 - [Usage](#Usage)
